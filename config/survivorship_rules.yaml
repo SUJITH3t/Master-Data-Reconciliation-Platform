@@ -1,0 +1,133 @@
+# Survivorship & Master Data Reconciliation Rules
+# Version: 1.0.0
+# Description: Deterministic business rules applied to resolve master data conflicts.
+
+settings:
+  freshness_threshold_days: 30
+  confidence_weights:
+    verification: 35
+    freshness: 25
+    source_authority: 20
+    system_agreement: 10
+    completeness: 10
+  confidence_tiers:
+    high: 90
+    medium: 70
+    low: 0
+
+source_priorities:
+  ERP: 10
+  E-commerce: 8
+  Store Inventory: 6
+  Delivery Partner: 5
+
+entities:
+  Customer:
+    fields:
+      name:
+        rules:
+          - completeness
+          - freshness
+          - source_priority
+        tie_breaker: source_priority
+        description: "Complete name preferred, followed by newest update and ERP source authority."
+
+      email:
+        rules:
+          - verified_value
+          - freshness
+          - non_null
+        tie_breaker: manual_review
+        description: "Verified email has priority over unverified email. Newer verified email wins. Tied verified values require manual review."
+
+      phone:
+        rules:
+          - valid_value
+          - freshness
+          - non_null
+        tie_breaker: freshness
+        description: "Valid standard phone format preferred, followed by newest timestamp."
+
+      address:
+        rules:
+          - non_null
+          - freshness
+          - completeness
+        tie_breaker: freshness
+        description: "Newer valid address has priority over older addresses. Missing values never overwrite valid addresses."
+
+  Product:
+    fields:
+      name:
+        rules:
+          - non_null
+          - source_priority
+        tie_breaker: source_priority
+        description: "ERP authoritative catalog name preferred."
+
+      sku:
+        rules:
+          - valid_value
+          - erp_priority
+        tie_breaker: erp_priority
+        description: "Valid non-empty SKU preferred over incomplete SKU. ERP is authoritative."
+
+      price:
+        rules:
+          - valid_value
+          - freshness
+        tie_breaker: freshness
+        description: "Most recent valid numeric price preferred."
+
+      category:
+        rules:
+          - non_null
+          - erp_priority
+        tie_breaker: erp_priority
+        description: "ERP category classification is preferred."
+
+      status:
+        rules:
+          - erp_priority
+          - freshness
+        tie_breaker: erp_priority
+        description: "ERP product status has priority over all other systems."
+
+  Supplier:
+    fields:
+      name:
+        rules:
+          - non_null
+          - erp_priority
+        tie_breaker: erp_priority
+        description: "ERP registered legal supplier name preferred."
+
+      email:
+        rules:
+          - verified_value
+          - freshness
+          - non_null
+        tie_breaker: manual_review
+        description: "Verified supplier email preferred over unverified."
+
+      phone:
+        rules:
+          - valid_value
+          - freshness
+        tie_breaker: freshness
+        description: "Newer valid supplier contact number preferred."
+
+      address:
+        rules:
+          - non_null
+          - freshness
+        tie_breaker: freshness
+        description: "Newer verified corporate address preferred."
+
+      status:
+        rules:
+          - verified_value
+          - freshness
+          - erp_priority
+        tie_breaker: erp_priority
+        description: "Verified supplier status preferred, followed by newer valid status."

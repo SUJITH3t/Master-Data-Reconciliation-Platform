@@ -1,0 +1,691 @@
+entity_type,organization,business_id,source_system,field_name,field_value,verification_status,timestamp
+Customer,Retail Company,CUST-001,ERP,name,Sujith,Verified,2026-08-22 12:00:00
+Customer,Retail Company,CUST-001,ERP,email,old@example.com,Verified,2026-08-22 12:00:00
+Customer,Retail Company,CUST-001,ERP,phone,9876543210,Verified,2026-08-22 12:00:00
+Customer,Retail Company,CUST-001,ERP,address,"123 Market St, Bangalore",Verified,2026-08-22 12:00:00
+Customer,Retail Company,CUST-001,E-commerce,name,Sujith Kumar,Verified,2026-08-30 12:00:00
+Customer,Retail Company,CUST-001,E-commerce,email,new@example.com,Verified,2026-08-30 12:00:00
+Customer,Retail Company,CUST-001,E-commerce,phone,9876543210,Verified,2026-08-30 12:00:00
+Customer,Retail Company,CUST-001,E-commerce,address,"123 Market St, Apt 4B, Bangalore",Verified,2026-08-30 12:00:00
+Customer,Retail Company,CUST-001,Store Inventory,name,Sujith Kumar,Unverified,2026-07-18 12:00:00
+Customer,Retail Company,CUST-001,Store Inventory,email,,Unverified,2026-07-18 12:00:00
+Customer,Retail Company,CUST-001,Store Inventory,phone,9876543210,Unverified,2026-07-18 12:00:00
+Customer,Retail Company,CUST-001,Store Inventory,address,123 Market St,Unverified,2026-07-18 12:00:00
+Customer,Retail Company,CUST-002,ERP,name,Ananya Sharma,Verified,2026-07-03 12:00:00
+Customer,Retail Company,CUST-002,ERP,email,ananya.old@retail.com,Verified,2026-07-03 12:00:00
+Customer,Retail Company,CUST-002,ERP,phone,9123456780,Verified,2026-07-03 12:00:00
+Customer,Retail Company,CUST-002,ERP,address,"45 Park Ave, Mumbai",Verified,2026-07-03 12:00:00
+Customer,Retail Company,CUST-002,E-commerce,name,Ananya Sharma,Unverified,2026-08-31 12:00:00
+Customer,Retail Company,CUST-002,E-commerce,email,,Unverified,2026-08-31 12:00:00
+Customer,Retail Company,CUST-002,E-commerce,phone,9123456780,Unverified,2026-08-31 12:00:00
+Customer,Retail Company,CUST-002,E-commerce,address,"45 Park Ave, Mumbai",Unverified,2026-08-31 12:00:00
+Customer,Retail Company,CUST-002,Store Inventory,name,Ananya S,Unverified,2026-06-03 12:00:00
+Customer,Retail Company,CUST-002,Store Inventory,email,,Unverified,2026-06-03 12:00:00
+Customer,Retail Company,CUST-002,Store Inventory,phone,9123456780,Unverified,2026-06-03 12:00:00
+Customer,Retail Company,CUST-002,Store Inventory,address,,Unverified,2026-06-03 12:00:00
+Customer,Retail Company,CUST-003,ERP,name,Rohan Verma,Verified,2026-08-30 12:00:00
+Customer,Retail Company,CUST-003,ERP,email,rohan.a@retail.demo,Verified,2026-08-30 12:00:00
+Customer,Retail Company,CUST-003,ERP,phone,9811122233,Verified,2026-08-30 12:00:00
+Customer,Retail Company,CUST-003,ERP,address,"77 Ring Rd, Delhi",Verified,2026-08-30 12:00:00
+Customer,Retail Company,CUST-003,E-commerce,name,Rohan Verma,Verified,2026-08-30 12:00:00
+Customer,Retail Company,CUST-003,E-commerce,email,rohan.b@retail.demo,Verified,2026-08-30 12:00:00
+Customer,Retail Company,CUST-003,E-commerce,phone,9811122233,Verified,2026-08-30 12:00:00
+Customer,Retail Company,CUST-003,E-commerce,address,"77 Ring Rd, Delhi",Verified,2026-08-30 12:00:00
+Customer,Retail Company,CUST-003,Store Inventory,name,Rohan V,Unverified,2026-08-27 12:00:00
+Customer,Retail Company,CUST-003,Store Inventory,email,rohan.c@retail.demo,Unverified,2026-08-27 12:00:00
+Customer,Retail Company,CUST-003,Store Inventory,phone,9811122233,Unverified,2026-08-27 12:00:00
+Customer,Retail Company,CUST-003,Store Inventory,address,77 Ring Rd,Unverified,2026-08-27 12:00:00
+Customer,Store Network,CUST-004,ERP,name,Priya Patel,Verified,2026-08-12 12:00:00
+Customer,Store Network,CUST-004,ERP,email,priya@patel.in,Verified,2026-08-12 12:00:00
+Customer,Store Network,CUST-004,ERP,phone,9822001122,Verified,2026-08-12 12:00:00
+Customer,Store Network,CUST-004,ERP,address,"12 MG Rd, Ahmedabad",Verified,2026-08-12 12:00:00
+Customer,Store Network,CUST-004,E-commerce,name,Priya Patel,Verified,2026-08-29 12:00:00
+Customer,Store Network,CUST-004,E-commerce,email,priya@patel.in,Verified,2026-08-29 12:00:00
+Customer,Store Network,CUST-004,E-commerce,phone,9822998877,Verified,2026-08-29 12:00:00
+Customer,Store Network,CUST-004,E-commerce,address,"12 MG Rd, Ahmedabad",Verified,2026-08-29 12:00:00
+Customer,Store Network,CUST-004,Store Inventory,name,Priya P,Unverified,2026-07-28 12:00:00
+Customer,Store Network,CUST-004,Store Inventory,email,priya@patel.in,Unverified,2026-07-28 12:00:00
+Customer,Store Network,CUST-004,Store Inventory,phone,9822001122,Unverified,2026-07-28 12:00:00
+Customer,Store Network,CUST-004,Store Inventory,address,12 MG Rd,Unverified,2026-07-28 12:00:00
+Customer,Retail Company,CUST-005,ERP,name,Amitabh Sen,Verified,2026-08-27 12:00:00
+Customer,Retail Company,CUST-005,ERP,email,amitabh@sen.org,Verified,2026-08-27 12:00:00
+Customer,Retail Company,CUST-005,ERP,phone,9833344455,Verified,2026-08-27 12:00:00
+Customer,Retail Company,CUST-005,ERP,address,"5 Park St, Kolkata",Verified,2026-08-27 12:00:00
+Customer,Retail Company,CUST-005,E-commerce,name,Amitabh Sen,Verified,2026-08-28 12:00:00
+Customer,Retail Company,CUST-005,E-commerce,email,amitabh@sen.org,Verified,2026-08-28 12:00:00
+Customer,Retail Company,CUST-005,E-commerce,phone,9833344455,Verified,2026-08-28 12:00:00
+Customer,Retail Company,CUST-005,E-commerce,address,"5 Park St, Kolkata",Verified,2026-08-28 12:00:00
+Customer,Retail Company,CUST-005,Store Inventory,name,Amitabh Sen,Unverified,2026-08-22 12:00:00
+Customer,Retail Company,CUST-005,Store Inventory,email,amitabh@sen.org,Unverified,2026-08-22 12:00:00
+Customer,Retail Company,CUST-005,Store Inventory,phone,9833344455,Unverified,2026-08-22 12:00:00
+Customer,Retail Company,CUST-005,Store Inventory,address,"5 Park St, Kolkata",Unverified,2026-08-22 12:00:00
+Customer,Retail Company,CUST-006,ERP,name,Kavita Iyer,Unverified,2026-08-31 12:00:00
+Customer,Retail Company,CUST-006,ERP,email,kavita.iyer@domain.com,Unverified,2026-08-31 12:00:00
+Customer,Retail Company,CUST-006,ERP,phone,9870000006,Unverified,2026-08-31 12:00:00
+Customer,Retail Company,CUST-006,ERP,address,6 Central Ave,Unverified,2026-08-31 12:00:00
+Customer,Retail Company,CUST-006,E-commerce,name,Kavita Iyer,Verified,2026-08-27 12:00:00
+Customer,Retail Company,CUST-006,E-commerce,email,kavita.updated@domain.com,Verified,2026-08-27 12:00:00
+Customer,Retail Company,CUST-006,E-commerce,phone,9871100006,Verified,2026-08-27 12:00:00
+Customer,Retail Company,CUST-006,E-commerce,address,6 Central Ave,Verified,2026-08-27 12:00:00
+Customer,Retail Company,CUST-006,Store Inventory,name,Kavita,Unverified,2026-07-23 12:00:00
+Customer,Retail Company,CUST-006,Store Inventory,email,,Unverified,2026-07-23 12:00:00
+Customer,Retail Company,CUST-006,Store Inventory,phone,9870000006,Unverified,2026-07-23 12:00:00
+Customer,Retail Company,CUST-006,Store Inventory,address,,Unverified,2026-07-23 12:00:00
+Customer,Retail Company,CUST-007,ERP,name,Vikram Mehta,Verified,2026-08-07 12:00:00
+Customer,Retail Company,CUST-007,ERP,email,vikram.mehta@domain.com,Verified,2026-08-07 12:00:00
+Customer,Retail Company,CUST-007,ERP,phone,9870000007,Verified,2026-08-07 12:00:00
+Customer,Retail Company,CUST-007,ERP,address,Old House 7,Verified,2026-08-07 12:00:00
+Customer,Retail Company,CUST-007,E-commerce,name,Vikram Mehta,Verified,2026-08-30 12:00:00
+Customer,Retail Company,CUST-007,E-commerce,email,vikram.updated@domain.com,Verified,2026-08-30 12:00:00
+Customer,Retail Company,CUST-007,E-commerce,phone,9871100007,Verified,2026-08-30 12:00:00
+Customer,Retail Company,CUST-007,E-commerce,address,New Tower Apt 7,Verified,2026-08-30 12:00:00
+Customer,Retail Company,CUST-007,Store Inventory,name,Vikram,Unverified,2026-07-13 12:00:00
+Customer,Retail Company,CUST-007,Store Inventory,email,vikram.mehta@domain.com,Unverified,2026-07-13 12:00:00
+Customer,Retail Company,CUST-007,Store Inventory,phone,9870000007,Unverified,2026-07-13 12:00:00
+Customer,Retail Company,CUST-007,Store Inventory,address,Old House 7,Unverified,2026-07-13 12:00:00
+Customer,Retail Company,CUST-008,ERP,name,Deepak Reddy,Verified,2026-08-29 12:00:00
+Customer,Retail Company,CUST-008,ERP,email,deepak.reddy@domain.com,Verified,2026-08-29 12:00:00
+Customer,Retail Company,CUST-008,ERP,phone,9870000008,Verified,2026-08-29 12:00:00
+Customer,Retail Company,CUST-008,ERP,address,8 Central Ave,Verified,2026-08-29 12:00:00
+Customer,Retail Company,CUST-008,E-commerce,name,Deepak Reddy,Verified,2026-08-29 12:00:00
+Customer,Retail Company,CUST-008,E-commerce,email,deepak.updated@domain.com,Verified,2026-08-29 12:00:00
+Customer,Retail Company,CUST-008,E-commerce,phone,9870000008,Verified,2026-08-29 12:00:00
+Customer,Retail Company,CUST-008,E-commerce,address,8 Central Ave,Verified,2026-08-29 12:00:00
+Customer,Retail Company,CUST-008,Store Inventory,name,Deepak,Unverified,2026-08-12 12:00:00
+Customer,Retail Company,CUST-008,Store Inventory,email,,Unverified,2026-08-12 12:00:00
+Customer,Retail Company,CUST-008,Store Inventory,phone,9870000008,Unverified,2026-08-12 12:00:00
+Customer,Retail Company,CUST-008,Store Inventory,address,8 Central Ave,Unverified,2026-08-12 12:00:00
+Customer,Retail Company,CUST-009,ERP,name,Neha Nair,Unverified,2026-08-31 12:00:00
+Customer,Retail Company,CUST-009,ERP,email,neha.nair@domain.com,Unverified,2026-08-31 12:00:00
+Customer,Retail Company,CUST-009,ERP,phone,9870000009,Unverified,2026-08-31 12:00:00
+Customer,Retail Company,CUST-009,ERP,address,9 Central Ave,Unverified,2026-08-31 12:00:00
+Customer,Retail Company,CUST-009,E-commerce,name,Neha Nair,Verified,2026-08-27 12:00:00
+Customer,Retail Company,CUST-009,E-commerce,email,neha.updated@domain.com,Verified,2026-08-27 12:00:00
+Customer,Retail Company,CUST-009,E-commerce,phone,9871100009,Verified,2026-08-27 12:00:00
+Customer,Retail Company,CUST-009,E-commerce,address,9 Central Ave,Verified,2026-08-27 12:00:00
+Customer,Retail Company,CUST-009,Store Inventory,name,Neha,Unverified,2026-07-23 12:00:00
+Customer,Retail Company,CUST-009,Store Inventory,email,,Unverified,2026-07-23 12:00:00
+Customer,Retail Company,CUST-009,Store Inventory,phone,9870000009,Unverified,2026-07-23 12:00:00
+Customer,Retail Company,CUST-009,Store Inventory,address,,Unverified,2026-07-23 12:00:00
+Customer,Retail Company,CUST-010,ERP,name,Rajesh Kapoor,Verified,2026-08-07 12:00:00
+Customer,Retail Company,CUST-010,ERP,email,rajesh.kapoor@domain.com,Verified,2026-08-07 12:00:00
+Customer,Retail Company,CUST-010,ERP,phone,9870000010,Verified,2026-08-07 12:00:00
+Customer,Retail Company,CUST-010,ERP,address,Old House 10,Verified,2026-08-07 12:00:00
+Customer,Retail Company,CUST-010,E-commerce,name,Rajesh Kapoor,Verified,2026-08-30 12:00:00
+Customer,Retail Company,CUST-010,E-commerce,email,rajesh.updated@domain.com,Verified,2026-08-30 12:00:00
+Customer,Retail Company,CUST-010,E-commerce,phone,9871100010,Verified,2026-08-30 12:00:00
+Customer,Retail Company,CUST-010,E-commerce,address,New Tower Apt 10,Verified,2026-08-30 12:00:00
+Customer,Retail Company,CUST-010,Store Inventory,name,Rajesh,Unverified,2026-07-13 12:00:00
+Customer,Retail Company,CUST-010,Store Inventory,email,rajesh.kapoor@domain.com,Unverified,2026-07-13 12:00:00
+Customer,Retail Company,CUST-010,Store Inventory,phone,9870000010,Unverified,2026-07-13 12:00:00
+Customer,Retail Company,CUST-010,Store Inventory,address,Old House 10,Unverified,2026-07-13 12:00:00
+Customer,Retail Company,CUST-011,ERP,name,Sunita Joshi,Verified,2026-08-07 12:00:00
+Customer,Retail Company,CUST-011,ERP,email,sunita.joshi@domain.com,Verified,2026-08-07 12:00:00
+Customer,Retail Company,CUST-011,ERP,phone,9870000011,Verified,2026-08-07 12:00:00
+Customer,Retail Company,CUST-011,ERP,address,Old House 11,Verified,2026-08-07 12:00:00
+Customer,Retail Company,CUST-011,E-commerce,name,Sunita Joshi,Verified,2026-08-30 12:00:00
+Customer,Retail Company,CUST-011,E-commerce,email,sunita.updated@domain.com,Verified,2026-08-30 12:00:00
+Customer,Retail Company,CUST-011,E-commerce,phone,9871100011,Verified,2026-08-30 12:00:00
+Customer,Retail Company,CUST-011,E-commerce,address,New Tower Apt 11,Verified,2026-08-30 12:00:00
+Customer,Retail Company,CUST-011,Store Inventory,name,Sunita,Unverified,2026-07-13 12:00:00
+Customer,Retail Company,CUST-011,Store Inventory,email,sunita.joshi@domain.com,Unverified,2026-07-13 12:00:00
+Customer,Retail Company,CUST-011,Store Inventory,phone,9870000011,Unverified,2026-07-13 12:00:00
+Customer,Retail Company,CUST-011,Store Inventory,address,Old House 11,Unverified,2026-07-13 12:00:00
+Customer,Retail Company,CUST-012,ERP,name,Manoj Bhat,Verified,2026-08-29 12:00:00
+Customer,Retail Company,CUST-012,ERP,email,manoj.bhat@domain.com,Verified,2026-08-29 12:00:00
+Customer,Retail Company,CUST-012,ERP,phone,9870000012,Verified,2026-08-29 12:00:00
+Customer,Retail Company,CUST-012,ERP,address,12 Central Ave,Verified,2026-08-29 12:00:00
+Customer,Retail Company,CUST-012,E-commerce,name,Manoj Bhat,Verified,2026-08-29 12:00:00
+Customer,Retail Company,CUST-012,E-commerce,email,manoj.updated@domain.com,Verified,2026-08-29 12:00:00
+Customer,Retail Company,CUST-012,E-commerce,phone,9870000012,Verified,2026-08-29 12:00:00
+Customer,Retail Company,CUST-012,E-commerce,address,12 Central Ave,Verified,2026-08-29 12:00:00
+Customer,Retail Company,CUST-012,Store Inventory,name,Manoj,Unverified,2026-08-12 12:00:00
+Customer,Retail Company,CUST-012,Store Inventory,email,,Unverified,2026-08-12 12:00:00
+Customer,Retail Company,CUST-012,Store Inventory,phone,9870000012,Unverified,2026-08-12 12:00:00
+Customer,Retail Company,CUST-012,Store Inventory,address,12 Central Ave,Unverified,2026-08-12 12:00:00
+Customer,Retail Company,CUST-013,ERP,name,Meera Chopra,Verified,2026-08-07 12:00:00
+Customer,Retail Company,CUST-013,ERP,email,meera.chopra@domain.com,Verified,2026-08-07 12:00:00
+Customer,Retail Company,CUST-013,ERP,phone,9870000013,Verified,2026-08-07 12:00:00
+Customer,Retail Company,CUST-013,ERP,address,Old House 13,Verified,2026-08-07 12:00:00
+Customer,Retail Company,CUST-013,E-commerce,name,Meera Chopra,Verified,2026-08-30 12:00:00
+Customer,Retail Company,CUST-013,E-commerce,email,meera.updated@domain.com,Verified,2026-08-30 12:00:00
+Customer,Retail Company,CUST-013,E-commerce,phone,9871100013,Verified,2026-08-30 12:00:00
+Customer,Retail Company,CUST-013,E-commerce,address,New Tower Apt 13,Verified,2026-08-30 12:00:00
+Customer,Retail Company,CUST-013,Store Inventory,name,Meera,Unverified,2026-07-13 12:00:00
+Customer,Retail Company,CUST-013,Store Inventory,email,meera.chopra@domain.com,Unverified,2026-07-13 12:00:00
+Customer,Retail Company,CUST-013,Store Inventory,phone,9870000013,Unverified,2026-07-13 12:00:00
+Customer,Retail Company,CUST-013,Store Inventory,address,Old House 13,Unverified,2026-07-13 12:00:00
+Customer,Retail Company,CUST-014,ERP,name,Arun Gupta,Verified,2026-08-07 12:00:00
+Customer,Retail Company,CUST-014,ERP,email,arun.gupta@domain.com,Verified,2026-08-07 12:00:00
+Customer,Retail Company,CUST-014,ERP,phone,9870000014,Verified,2026-08-07 12:00:00
+Customer,Retail Company,CUST-014,ERP,address,Old House 14,Verified,2026-08-07 12:00:00
+Customer,Retail Company,CUST-014,E-commerce,name,Arun Gupta,Verified,2026-08-30 12:00:00
+Customer,Retail Company,CUST-014,E-commerce,email,arun.updated@domain.com,Verified,2026-08-30 12:00:00
+Customer,Retail Company,CUST-014,E-commerce,phone,9871100014,Verified,2026-08-30 12:00:00
+Customer,Retail Company,CUST-014,E-commerce,address,New Tower Apt 14,Verified,2026-08-30 12:00:00
+Customer,Retail Company,CUST-014,Store Inventory,name,Arun,Unverified,2026-07-13 12:00:00
+Customer,Retail Company,CUST-014,Store Inventory,email,arun.gupta@domain.com,Unverified,2026-07-13 12:00:00
+Customer,Retail Company,CUST-014,Store Inventory,phone,9870000014,Unverified,2026-07-13 12:00:00
+Customer,Retail Company,CUST-014,Store Inventory,address,Old House 14,Unverified,2026-07-13 12:00:00
+Customer,Retail Company,CUST-015,ERP,name,Divya Saxena,Unverified,2026-08-31 12:00:00
+Customer,Retail Company,CUST-015,ERP,email,divya.saxena@domain.com,Unverified,2026-08-31 12:00:00
+Customer,Retail Company,CUST-015,ERP,phone,9870000015,Unverified,2026-08-31 12:00:00
+Customer,Retail Company,CUST-015,ERP,address,15 Central Ave,Unverified,2026-08-31 12:00:00
+Customer,Retail Company,CUST-015,E-commerce,name,Divya Saxena,Verified,2026-08-27 12:00:00
+Customer,Retail Company,CUST-015,E-commerce,email,divya.updated@domain.com,Verified,2026-08-27 12:00:00
+Customer,Retail Company,CUST-015,E-commerce,phone,9871100015,Verified,2026-08-27 12:00:00
+Customer,Retail Company,CUST-015,E-commerce,address,15 Central Ave,Verified,2026-08-27 12:00:00
+Customer,Retail Company,CUST-015,Store Inventory,name,Divya,Unverified,2026-07-23 12:00:00
+Customer,Retail Company,CUST-015,Store Inventory,email,,Unverified,2026-07-23 12:00:00
+Customer,Retail Company,CUST-015,Store Inventory,phone,9870000015,Unverified,2026-07-23 12:00:00
+Customer,Retail Company,CUST-015,Store Inventory,address,,Unverified,2026-07-23 12:00:00
+Customer,Retail Company,CUST-016,ERP,name,Suresh Bose,Verified,2026-08-29 12:00:00
+Customer,Retail Company,CUST-016,ERP,email,suresh.bose@domain.com,Verified,2026-08-29 12:00:00
+Customer,Retail Company,CUST-016,ERP,phone,9870000016,Verified,2026-08-29 12:00:00
+Customer,Retail Company,CUST-016,ERP,address,16 Central Ave,Verified,2026-08-29 12:00:00
+Customer,Retail Company,CUST-016,E-commerce,name,Suresh Bose,Verified,2026-08-29 12:00:00
+Customer,Retail Company,CUST-016,E-commerce,email,suresh.updated@domain.com,Verified,2026-08-29 12:00:00
+Customer,Retail Company,CUST-016,E-commerce,phone,9870000016,Verified,2026-08-29 12:00:00
+Customer,Retail Company,CUST-016,E-commerce,address,16 Central Ave,Verified,2026-08-29 12:00:00
+Customer,Retail Company,CUST-016,Store Inventory,name,Suresh,Unverified,2026-08-12 12:00:00
+Customer,Retail Company,CUST-016,Store Inventory,email,,Unverified,2026-08-12 12:00:00
+Customer,Retail Company,CUST-016,Store Inventory,phone,9870000016,Unverified,2026-08-12 12:00:00
+Customer,Retail Company,CUST-016,Store Inventory,address,16 Central Ave,Unverified,2026-08-12 12:00:00
+Customer,Retail Company,CUST-017,ERP,name,Pooja Menon,Verified,2026-08-07 12:00:00
+Customer,Retail Company,CUST-017,ERP,email,pooja.menon@domain.com,Verified,2026-08-07 12:00:00
+Customer,Retail Company,CUST-017,ERP,phone,9870000017,Verified,2026-08-07 12:00:00
+Customer,Retail Company,CUST-017,ERP,address,Old House 17,Verified,2026-08-07 12:00:00
+Customer,Retail Company,CUST-017,E-commerce,name,Pooja Menon,Verified,2026-08-30 12:00:00
+Customer,Retail Company,CUST-017,E-commerce,email,pooja.updated@domain.com,Verified,2026-08-30 12:00:00
+Customer,Retail Company,CUST-017,E-commerce,phone,9871100017,Verified,2026-08-30 12:00:00
+Customer,Retail Company,CUST-017,E-commerce,address,New Tower Apt 17,Verified,2026-08-30 12:00:00
+Customer,Retail Company,CUST-017,Store Inventory,name,Pooja,Unverified,2026-07-13 12:00:00
+Customer,Retail Company,CUST-017,Store Inventory,email,pooja.menon@domain.com,Unverified,2026-07-13 12:00:00
+Customer,Retail Company,CUST-017,Store Inventory,phone,9870000017,Unverified,2026-07-13 12:00:00
+Customer,Retail Company,CUST-017,Store Inventory,address,Old House 17,Unverified,2026-07-13 12:00:00
+Customer,Retail Company,CUST-018,ERP,name,Gaurav Malhotra,Unverified,2026-08-31 12:00:00
+Customer,Retail Company,CUST-018,ERP,email,gaurav.malhotra@domain.com,Unverified,2026-08-31 12:00:00
+Customer,Retail Company,CUST-018,ERP,phone,9870000018,Unverified,2026-08-31 12:00:00
+Customer,Retail Company,CUST-018,ERP,address,18 Central Ave,Unverified,2026-08-31 12:00:00
+Customer,Retail Company,CUST-018,E-commerce,name,Gaurav Malhotra,Verified,2026-08-27 12:00:00
+Customer,Retail Company,CUST-018,E-commerce,email,gaurav.updated@domain.com,Verified,2026-08-27 12:00:00
+Customer,Retail Company,CUST-018,E-commerce,phone,9871100018,Verified,2026-08-27 12:00:00
+Customer,Retail Company,CUST-018,E-commerce,address,18 Central Ave,Verified,2026-08-27 12:00:00
+Customer,Retail Company,CUST-018,Store Inventory,name,Gaurav,Unverified,2026-07-23 12:00:00
+Customer,Retail Company,CUST-018,Store Inventory,email,,Unverified,2026-07-23 12:00:00
+Customer,Retail Company,CUST-018,Store Inventory,phone,9870000018,Unverified,2026-07-23 12:00:00
+Customer,Retail Company,CUST-018,Store Inventory,address,,Unverified,2026-07-23 12:00:00
+Customer,Retail Company,CUST-019,ERP,name,Anita Pandey,Verified,2026-08-07 12:00:00
+Customer,Retail Company,CUST-019,ERP,email,anita.pandey@domain.com,Verified,2026-08-07 12:00:00
+Customer,Retail Company,CUST-019,ERP,phone,9870000019,Verified,2026-08-07 12:00:00
+Customer,Retail Company,CUST-019,ERP,address,Old House 19,Verified,2026-08-07 12:00:00
+Customer,Retail Company,CUST-019,E-commerce,name,Anita Pandey,Verified,2026-08-30 12:00:00
+Customer,Retail Company,CUST-019,E-commerce,email,anita.updated@domain.com,Verified,2026-08-30 12:00:00
+Customer,Retail Company,CUST-019,E-commerce,phone,9871100019,Verified,2026-08-30 12:00:00
+Customer,Retail Company,CUST-019,E-commerce,address,New Tower Apt 19,Verified,2026-08-30 12:00:00
+Customer,Retail Company,CUST-019,Store Inventory,name,Anita,Unverified,2026-07-13 12:00:00
+Customer,Retail Company,CUST-019,Store Inventory,email,anita.pandey@domain.com,Unverified,2026-07-13 12:00:00
+Customer,Retail Company,CUST-019,Store Inventory,phone,9870000019,Unverified,2026-07-13 12:00:00
+Customer,Retail Company,CUST-019,Store Inventory,address,Old House 19,Unverified,2026-07-13 12:00:00
+Customer,Retail Company,CUST-020,ERP,name,Harish Kulkarni,Verified,2026-08-29 12:00:00
+Customer,Retail Company,CUST-020,ERP,email,harish.kulkarni@domain.com,Verified,2026-08-29 12:00:00
+Customer,Retail Company,CUST-020,ERP,phone,9870000020,Verified,2026-08-29 12:00:00
+Customer,Retail Company,CUST-020,ERP,address,20 Central Ave,Verified,2026-08-29 12:00:00
+Customer,Retail Company,CUST-020,E-commerce,name,Harish Kulkarni,Verified,2026-08-29 12:00:00
+Customer,Retail Company,CUST-020,E-commerce,email,harish.updated@domain.com,Verified,2026-08-29 12:00:00
+Customer,Retail Company,CUST-020,E-commerce,phone,9870000020,Verified,2026-08-29 12:00:00
+Customer,Retail Company,CUST-020,E-commerce,address,20 Central Ave,Verified,2026-08-29 12:00:00
+Customer,Retail Company,CUST-020,Store Inventory,name,Harish,Unverified,2026-08-12 12:00:00
+Customer,Retail Company,CUST-020,Store Inventory,email,,Unverified,2026-08-12 12:00:00
+Customer,Retail Company,CUST-020,Store Inventory,phone,9870000020,Unverified,2026-08-12 12:00:00
+Customer,Retail Company,CUST-020,Store Inventory,address,20 Central Ave,Unverified,2026-08-12 12:00:00
+Product,Retail Company,PROD-001,ERP,name,UltraHD 4K Smart TV 55,Verified,2026-08-22 12:00:00
+Product,Retail Company,PROD-001,ERP,sku,SKU-TV-4K55,Verified,2026-08-22 12:00:00
+Product,Retail Company,PROD-001,ERP,price,54999.0,Verified,2026-08-22 12:00:00
+Product,Retail Company,PROD-001,ERP,category,Electronics,Verified,2026-08-22 12:00:00
+Product,Retail Company,PROD-001,ERP,status,Active,Verified,2026-08-22 12:00:00
+Product,Retail Company,PROD-001,E-commerce,name,UltraHD 4K Smart TV 55,Verified,2026-08-31 12:00:00
+Product,Retail Company,PROD-001,E-commerce,sku,SKU-TV-4K55,Verified,2026-08-31 12:00:00
+Product,Retail Company,PROD-001,E-commerce,price,52999.0,Verified,2026-08-31 12:00:00
+Product,Retail Company,PROD-001,E-commerce,category,Electronics,Verified,2026-08-31 12:00:00
+Product,Retail Company,PROD-001,E-commerce,status,Active,Verified,2026-08-31 12:00:00
+Product,Retail Company,PROD-001,Store Inventory,name,UltraHD 4K Smart TV 55,Unverified,2026-08-12 12:00:00
+Product,Retail Company,PROD-001,Store Inventory,sku,SKU-TV-4K55,Unverified,2026-08-12 12:00:00
+Product,Retail Company,PROD-001,Store Inventory,price,54999.0,Unverified,2026-08-12 12:00:00
+Product,Retail Company,PROD-001,Store Inventory,category,Electronics,Unverified,2026-08-12 12:00:00
+Product,Retail Company,PROD-001,Store Inventory,status,Active,Unverified,2026-08-12 12:00:00
+Product,Retail Company,PROD-002,ERP,name,Ergonomic Office Chair Mesh,Verified,2026-08-17 12:00:00
+Product,Retail Company,PROD-002,ERP,sku,SKU-CH-ERG01,Verified,2026-08-17 12:00:00
+Product,Retail Company,PROD-002,ERP,price,12499.0,Verified,2026-08-17 12:00:00
+Product,Retail Company,PROD-002,ERP,category,Furniture,Verified,2026-08-17 12:00:00
+Product,Retail Company,PROD-002,ERP,status,Discontinued,Verified,2026-08-17 12:00:00
+Product,Retail Company,PROD-002,E-commerce,name,Ergonomic Office Chair Mesh,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-002,E-commerce,sku,SKU-CH-ERG01,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-002,E-commerce,price,11999.0,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-002,E-commerce,category,Furniture,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-002,E-commerce,status,Active,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-002,Store Inventory,name,Ergonomic Office Chair Mesh,Unverified,2026-08-27 12:00:00
+Product,Retail Company,PROD-002,Store Inventory,sku,SKU-CH-ERG01,Unverified,2026-08-27 12:00:00
+Product,Retail Company,PROD-002,Store Inventory,price,12499.0,Unverified,2026-08-27 12:00:00
+Product,Retail Company,PROD-002,Store Inventory,category,Furniture,Unverified,2026-08-27 12:00:00
+Product,Retail Company,PROD-002,Store Inventory,status,In Stock,Unverified,2026-08-27 12:00:00
+Product,Retail Company,PROD-003,ERP,name,Noise Cancelling Headphones Pro,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-003,ERP,sku,SKU-HP-NC70,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-003,ERP,price,14999.0,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-003,ERP,category,Electronics,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-003,ERP,status,Active,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-003,E-commerce,name,Noise Cancelling Headphones Pro,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-003,E-commerce,sku,SKU-HP-NC70,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-003,E-commerce,price,13499.0,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-003,E-commerce,category,Electronics,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-003,E-commerce,status,Active,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-003,Store Inventory,name,Noise Cancelling Headphones Pro,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-003,Store Inventory,sku,SKU-HP-NC70,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-003,Store Inventory,price,14999.0,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-003,Store Inventory,category,Electronics,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-003,Store Inventory,status,Available,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-004,ERP,name,Organic Arabica Coffee Beans 1kg,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-004,ERP,sku,SKU-CF-ARB01,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-004,ERP,price,899.0,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-004,ERP,category,Grocery,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-004,ERP,status,Active,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-004,E-commerce,name,Organic Arabica Coffee Beans 1kg,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-004,E-commerce,sku,SKU-CF-ARB01,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-004,E-commerce,price,950.0,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-004,E-commerce,category,Grocery,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-004,E-commerce,status,Out of Stock,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-004,Store Inventory,name,Organic Arabica Coffee Beans 1kg,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-004,Store Inventory,sku,SKU-CF-ARB01,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-004,Store Inventory,price,899.0,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-004,Store Inventory,category,Grocery,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-004,Store Inventory,status,Available,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-005,ERP,name,Stainless Steel Thermal Flask 1L,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-005,ERP,sku,SKU-FL-SS100,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-005,ERP,price,1299.0,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-005,ERP,category,Kitchen,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-005,ERP,status,Active,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-005,E-commerce,name,Stainless Steel Thermal Flask 1L,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-005,E-commerce,sku,SKU-FL-SS100,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-005,E-commerce,price,1299.0,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-005,E-commerce,category,Kitchen,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-005,E-commerce,status,Active,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-005,Store Inventory,name,Stainless Steel Thermal Flask 1L,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-005,Store Inventory,sku,SKU-FL-SS100,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-005,Store Inventory,price,1299.0,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-005,Store Inventory,category,Kitchen,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-005,Store Inventory,status,Available,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-006,ERP,name,Wireless Mechanical Gaming Keyboard,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-006,ERP,sku,SKU-KB-MECH8,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-006,ERP,price,6499.0,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-006,ERP,category,Gaming,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-006,ERP,status,Active,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-006,E-commerce,name,Wireless Mechanical Gaming Keyboard,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-006,E-commerce,sku,SKU-KB-MECH8,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-006,E-commerce,price,5999.0,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-006,E-commerce,category,Gaming,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-006,E-commerce,status,Active,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-006,Store Inventory,name,Wireless Mechanical Gaming Keyboard,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-006,Store Inventory,sku,SKU-KB-MECH8,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-006,Store Inventory,price,6499.0,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-006,Store Inventory,category,Gaming,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-006,Store Inventory,status,Available,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-007,ERP,name,Cotton Percale King BedSheet Set,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-007,ERP,sku,SKU-BS-KNG02,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-007,ERP,price,2499.0,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-007,ERP,category,Home,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-007,ERP,status,Active,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-007,E-commerce,name,Cotton Percale King BedSheet Set,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-007,E-commerce,sku,SKU-BS-KNG02,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-007,E-commerce,price,2299.0,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-007,E-commerce,category,Home,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-007,E-commerce,status,Active,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-007,Store Inventory,name,Cotton Percale King BedSheet Set,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-007,Store Inventory,sku,SKU-BS-KNG02,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-007,Store Inventory,price,2499.0,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-007,Store Inventory,category,Home,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-007,Store Inventory,status,Available,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-008,ERP,name,Air Purifier HEPA H13 Filter,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-008,ERP,sku,SKU-AP-H1301,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-008,ERP,price,8999.0,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-008,ERP,category,Appliances,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-008,ERP,status,Recalled,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-008,E-commerce,name,Air Purifier HEPA H13 Filter,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-008,E-commerce,sku,SKU-AP-H1301,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-008,E-commerce,price,9499.0,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-008,E-commerce,category,Appliances,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-008,E-commerce,status,Active,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-008,Store Inventory,name,Air Purifier HEPA H13 Filter,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-008,Store Inventory,sku,SKU-AP-H1301,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-008,Store Inventory,price,8999.0,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-008,Store Inventory,category,Appliances,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-008,Store Inventory,status,Available,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-009,ERP,name,Men Running Shoes Carbon Plate,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-009,ERP,sku,SKU-SH-CRB10,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-009,ERP,price,7999.0,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-009,ERP,category,Apparel,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-009,ERP,status,Active,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-009,E-commerce,name,Men Running Shoes Carbon Plate,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-009,E-commerce,sku,SKU-SH-CRB10,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-009,E-commerce,price,7499.0,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-009,E-commerce,category,Apparel,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-009,E-commerce,status,Active,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-009,Store Inventory,name,Men Running Shoes Carbon Plate,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-009,Store Inventory,sku,SKU-SH-CRB10,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-009,Store Inventory,price,7999.0,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-009,Store Inventory,category,Apparel,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-009,Store Inventory,status,Available,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-010,ERP,name,Smart Fitness Tracker Band 7,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-010,ERP,sku,SKU-FT-BND07,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-010,ERP,price,2999.0,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-010,ERP,category,Wearables,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-010,ERP,status,Active,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-010,E-commerce,name,Smart Fitness Tracker Band 7,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-010,E-commerce,sku,SKU-FT-BND07,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-010,E-commerce,price,2799.0,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-010,E-commerce,category,Wearables,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-010,E-commerce,status,Active,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-010,Store Inventory,name,Smart Fitness Tracker Band 7,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-010,Store Inventory,sku,SKU-FT-BND07,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-010,Store Inventory,price,2999.0,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-010,Store Inventory,category,Wearables,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-010,Store Inventory,status,Available,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-011,ERP,name,Ceramic Non-Stick Frying Pan 28cm,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-011,ERP,sku,SKU-PN-CR28,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-011,ERP,price,1899.0,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-011,ERP,category,Kitchen,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-011,ERP,status,Active,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-011,E-commerce,name,Ceramic Non-Stick Frying Pan 28cm,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-011,E-commerce,sku,SKU-PN-CR28,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-011,E-commerce,price,1799.0,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-011,E-commerce,category,Kitchen,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-011,E-commerce,status,Active,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-011,Store Inventory,name,Ceramic Non-Stick Frying Pan 28cm,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-011,Store Inventory,sku,SKU-PN-CR28,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-011,Store Inventory,price,1899.0,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-011,Store Inventory,category,Kitchen,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-011,Store Inventory,status,Available,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-012,ERP,name,Compact Cordless Vacuum Cleaner,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-012,ERP,sku,SKU-VC-CORD5,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-012,ERP,price,11999.0,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-012,ERP,category,Appliances,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-012,ERP,status,Active,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-012,E-commerce,name,Compact Cordless Vacuum Cleaner,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-012,E-commerce,sku,SKU-VC-CORD5,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-012,E-commerce,price,11499.0,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-012,E-commerce,category,Appliances,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-012,E-commerce,status,Active,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-012,Store Inventory,name,Compact Cordless Vacuum Cleaner,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-012,Store Inventory,sku,SKU-VC-CORD5,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-012,Store Inventory,price,11999.0,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-012,Store Inventory,category,Appliances,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-012,Store Inventory,status,Available,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-013,ERP,name,Adjustable Dumbbell Set 20kg,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-013,ERP,sku,SKU-DB-ADJ20,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-013,ERP,price,8499.0,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-013,ERP,category,Fitness,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-013,ERP,status,Active,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-013,E-commerce,name,Adjustable Dumbbell Set 20kg,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-013,E-commerce,sku,SKU-DB-ADJ20,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-013,E-commerce,price,7999.0,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-013,E-commerce,category,Fitness,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-013,E-commerce,status,Active,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-013,Store Inventory,name,Adjustable Dumbbell Set 20kg,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-013,Store Inventory,sku,SKU-DB-ADJ20,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-013,Store Inventory,price,8499.0,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-013,Store Inventory,category,Fitness,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-013,Store Inventory,status,Available,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-014,ERP,name,Bluetooth Waterproof Speaker 20W,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-014,ERP,sku,SKU-SP-BT20W,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-014,ERP,price,3499.0,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-014,ERP,category,Audio,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-014,ERP,status,Active,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-014,E-commerce,name,Bluetooth Waterproof Speaker 20W,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-014,E-commerce,sku,SKU-SP-BT20W,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-014,E-commerce,price,3299.0,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-014,E-commerce,category,Audio,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-014,E-commerce,status,Active,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-014,Store Inventory,name,Bluetooth Waterproof Speaker 20W,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-014,Store Inventory,sku,SKU-SP-BT20W,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-014,Store Inventory,price,3499.0,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-014,Store Inventory,category,Audio,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-014,Store Inventory,status,Available,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-015,ERP,name,Minimalist Vegan Leather Backpack,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-015,ERP,sku,SKU-BP-VGN01,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-015,ERP,price,3999.0,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-015,ERP,category,Accessories,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-015,ERP,status,Active,Verified,2026-08-20 12:00:00
+Product,Retail Company,PROD-015,E-commerce,name,Minimalist Vegan Leather Backpack,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-015,E-commerce,sku,SKU-BP-VGN01,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-015,E-commerce,price,3799.0,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-015,E-commerce,category,Accessories,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-015,E-commerce,status,Active,Verified,2026-08-30 12:00:00
+Product,Retail Company,PROD-015,Store Inventory,name,Minimalist Vegan Leather Backpack,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-015,Store Inventory,sku,SKU-BP-VGN01,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-015,Store Inventory,price,3999.0,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-015,Store Inventory,category,Accessories,Unverified,2026-08-07 12:00:00
+Product,Retail Company,PROD-015,Store Inventory,status,Available,Unverified,2026-08-07 12:00:00
+Supplier,Delivery Partner,SUP-001,ERP,name,Apex Logistics Ltd,Unverified,2026-08-28 12:00:00
+Supplier,Delivery Partner,SUP-001,ERP,email,contact@apexlog.com,Unverified,2026-08-28 12:00:00
+Supplier,Delivery Partner,SUP-001,ERP,phone,02224001122,Unverified,2026-08-28 12:00:00
+Supplier,Delivery Partner,SUP-001,ERP,address,"Terminal 1A, Nhava Sheva",Unverified,2026-08-28 12:00:00
+Supplier,Delivery Partner,SUP-001,ERP,status,Active,Unverified,2026-08-28 12:00:00
+Supplier,Delivery Partner,SUP-001,Delivery Partner,name,Apex Logistics Ltd,Verified,2026-08-30 12:00:00
+Supplier,Delivery Partner,SUP-001,Delivery Partner,email,verified@apexlog.com,Verified,2026-08-30 12:00:00
+Supplier,Delivery Partner,SUP-001,Delivery Partner,phone,02224001122,Verified,2026-08-30 12:00:00
+Supplier,Delivery Partner,SUP-001,Delivery Partner,address,"Terminal 1A, Nhava Sheva",Verified,2026-08-30 12:00:00
+Supplier,Delivery Partner,SUP-001,Delivery Partner,status,Active,Verified,2026-08-30 12:00:00
+Supplier,Delivery Partner,SUP-001,Store Inventory,name,Apex Logistics Ltd,Unverified,2026-07-23 12:00:00
+Supplier,Delivery Partner,SUP-001,Store Inventory,email,,Unverified,2026-07-23 12:00:00
+Supplier,Delivery Partner,SUP-001,Store Inventory,phone,02224001122,Unverified,2026-07-23 12:00:00
+Supplier,Delivery Partner,SUP-001,Store Inventory,address,Port Area,Unverified,2026-07-23 12:00:00
+Supplier,Delivery Partner,SUP-001,Store Inventory,status,Active,Unverified,2026-07-23 12:00:00
+Supplier,Delivery Partner,SUP-002,ERP,name,Bharat Paper Mill,Verified,2026-08-30 12:00:00
+Supplier,Delivery Partner,SUP-002,ERP,email,sales@bharatpaper.in,Verified,2026-08-30 12:00:00
+Supplier,Delivery Partner,SUP-002,ERP,phone,03322003344,Verified,2026-08-30 12:00:00
+Supplier,Delivery Partner,SUP-002,ERP,address,Kolkata Mill Rd,Verified,2026-08-30 12:00:00
+Supplier,Delivery Partner,SUP-002,ERP,status,Under Audit,Verified,2026-08-30 12:00:00
+Supplier,Delivery Partner,SUP-002,Delivery Partner,name,Bharat Paper Mill,Unverified,2026-08-17 12:00:00
+Supplier,Delivery Partner,SUP-002,Delivery Partner,email,info@bharatpaper.in,Unverified,2026-08-17 12:00:00
+Supplier,Delivery Partner,SUP-002,Delivery Partner,phone,03322003344,Unverified,2026-08-17 12:00:00
+Supplier,Delivery Partner,SUP-002,Delivery Partner,address,Kolkata Mill Rd,Unverified,2026-08-17 12:00:00
+Supplier,Delivery Partner,SUP-002,Delivery Partner,status,Active,Unverified,2026-08-17 12:00:00
+Supplier,Delivery Partner,SUP-002,Store Inventory,name,Bharat Paper Mill,Unverified,2026-07-03 12:00:00
+Supplier,Delivery Partner,SUP-002,Store Inventory,email,sales@bharatpaper.in,Unverified,2026-07-03 12:00:00
+Supplier,Delivery Partner,SUP-002,Store Inventory,phone,03322003344,Unverified,2026-07-03 12:00:00
+Supplier,Delivery Partner,SUP-002,Store Inventory,address,,Unverified,2026-07-03 12:00:00
+Supplier,Delivery Partner,SUP-002,Store Inventory,status,Active,Unverified,2026-07-03 12:00:00
+Supplier,Retail Company,SUP-003,ERP,name,Coastal Ocean Freight,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-003,ERP,email,ops@coastalfreight.com,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-003,ERP,phone,08028005566,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-003,ERP,address,Industrial Zone 2,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-003,ERP,status,Active,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-003,Delivery Partner,name,Coastal Ocean Freight,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-003,Delivery Partner,email,support@coastalfreight.com,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-003,Delivery Partner,phone,08028005566,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-003,Delivery Partner,address,Industrial Zone 2,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-003,Delivery Partner,status,Active,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-003,Store Inventory,name,Coastal Ocean Freight,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-003,Store Inventory,email,,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-003,Store Inventory,phone,08028005566,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-003,Store Inventory,address,Zone 2,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-003,Store Inventory,status,Active,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-004,ERP,name,Delta Packaging Corp,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-004,ERP,email,orders@deltapack.com,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-004,ERP,phone,08028005566,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-004,ERP,address,Industrial Zone 2,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-004,ERP,status,Active,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-004,Delivery Partner,name,Delta Packaging Corp,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-004,Delivery Partner,email,orders@deltapack.com,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-004,Delivery Partner,phone,08028005566,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-004,Delivery Partner,address,Industrial Zone 2,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-004,Delivery Partner,status,Active,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-004,Store Inventory,name,Delta Packaging Corp,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-004,Store Inventory,email,,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-004,Store Inventory,phone,08028005566,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-004,Store Inventory,address,Zone 2,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-004,Store Inventory,status,Active,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-005,ERP,name,Eastern Textile Mills,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-005,ERP,email,contact@easterntex.com,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-005,ERP,phone,08028005566,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-005,ERP,address,Industrial Zone 2,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-005,ERP,status,Active,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-005,Delivery Partner,name,Eastern Textile Mills,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-005,Delivery Partner,email,billing@easterntex.com,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-005,Delivery Partner,phone,08028005566,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-005,Delivery Partner,address,Industrial Zone 2,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-005,Delivery Partner,status,Active,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-005,Store Inventory,name,Eastern Textile Mills,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-005,Store Inventory,email,,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-005,Store Inventory,phone,08028005566,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-005,Store Inventory,address,Zone 2,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-005,Store Inventory,status,Active,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-006,ERP,name,Forward Cargo Dispatch,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-006,ERP,email,support@forwardcargo.net,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-006,ERP,phone,08028005566,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-006,ERP,address,Industrial Zone 2,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-006,ERP,status,Suspended,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-006,Delivery Partner,name,Forward Cargo Dispatch,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-006,Delivery Partner,email,info@forwardcargo.net,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-006,Delivery Partner,phone,08028005566,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-006,Delivery Partner,address,Industrial Zone 2,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-006,Delivery Partner,status,Active,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-006,Store Inventory,name,Forward Cargo Dispatch,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-006,Store Inventory,email,,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-006,Store Inventory,phone,08028005566,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-006,Store Inventory,address,Zone 2,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-006,Store Inventory,status,Active,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-007,ERP,name,Green Leaf Agro Foods,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-007,ERP,email,sales@greenleafagro.com,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-007,ERP,phone,08028005566,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-007,ERP,address,Industrial Zone 2,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-007,ERP,status,Active,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-007,Delivery Partner,name,Green Leaf Agro Foods,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-007,Delivery Partner,email,sales@greenleafagro.com,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-007,Delivery Partner,phone,08028005566,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-007,Delivery Partner,address,Industrial Zone 2,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-007,Delivery Partner,status,Active,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-007,Store Inventory,name,Green Leaf Agro Foods,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-007,Store Inventory,email,,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-007,Store Inventory,phone,08028005566,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-007,Store Inventory,address,Zone 2,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-007,Store Inventory,status,Active,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-008,ERP,name,Highland Dairy Co,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-008,ERP,email,admin@highlanddairy.in,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-008,ERP,phone,08028005566,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-008,ERP,address,Industrial Zone 2,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-008,ERP,status,Active,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-008,Delivery Partner,name,Highland Dairy Co,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-008,Delivery Partner,email,info@highlanddairy.in,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-008,Delivery Partner,phone,08028005566,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-008,Delivery Partner,address,Industrial Zone 2,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-008,Delivery Partner,status,Active,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-008,Store Inventory,name,Highland Dairy Co,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-008,Store Inventory,email,,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-008,Store Inventory,phone,08028005566,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-008,Store Inventory,address,Zone 2,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-008,Store Inventory,status,Active,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-009,ERP,name,Indus Polymer Works,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-009,ERP,email,contact@induspoly.com,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-009,ERP,phone,08028005566,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-009,ERP,address,Industrial Zone 2,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-009,ERP,status,Active,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-009,Delivery Partner,name,Indus Polymer Works,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-009,Delivery Partner,email,orders@induspoly.com,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-009,Delivery Partner,phone,08028005566,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-009,Delivery Partner,address,Industrial Zone 2,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-009,Delivery Partner,status,Active,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-009,Store Inventory,name,Indus Polymer Works,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-009,Store Inventory,email,,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-009,Store Inventory,phone,08028005566,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-009,Store Inventory,address,Zone 2,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-009,Store Inventory,status,Active,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-010,ERP,name,Jupiter Industrial Tools,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-010,ERP,email,info@jupitertools.com,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-010,ERP,phone,08028005566,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-010,ERP,address,Industrial Zone 2,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-010,ERP,status,Active,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-010,Delivery Partner,name,Jupiter Industrial Tools,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-010,Delivery Partner,email,support@jupitertools.com,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-010,Delivery Partner,phone,08028005566,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-010,Delivery Partner,address,Industrial Zone 2,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-010,Delivery Partner,status,Active,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-010,Store Inventory,name,Jupiter Industrial Tools,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-010,Store Inventory,email,,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-010,Store Inventory,phone,08028005566,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-010,Store Inventory,address,Zone 2,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-010,Store Inventory,status,Active,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-011,ERP,name,Kraft Precision Metals,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-011,ERP,email,sales@kraftmetals.de,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-011,ERP,phone,08028005566,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-011,ERP,address,Industrial Zone 2,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-011,ERP,status,Active,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-011,Delivery Partner,name,Kraft Precision Metals,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-011,Delivery Partner,email,sales@kraftmetals.de,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-011,Delivery Partner,phone,08028005566,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-011,Delivery Partner,address,Industrial Zone 2,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-011,Delivery Partner,status,Active,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-011,Store Inventory,name,Kraft Precision Metals,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-011,Store Inventory,email,,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-011,Store Inventory,phone,08028005566,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-011,Store Inventory,address,Zone 2,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-011,Store Inventory,status,Active,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-012,ERP,name,Lotus Organic Cotton,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-012,ERP,email,supply@lotusorganic.in,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-012,ERP,phone,08028005566,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-012,ERP,address,Industrial Zone 2,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-012,ERP,status,Active,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-012,Delivery Partner,name,Lotus Organic Cotton,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-012,Delivery Partner,email,supply@lotusorganic.in,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-012,Delivery Partner,phone,08028005566,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-012,Delivery Partner,address,Industrial Zone 2,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-012,Delivery Partner,status,Active,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-012,Store Inventory,name,Lotus Organic Cotton,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-012,Store Inventory,email,,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-012,Store Inventory,phone,08028005566,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-012,Store Inventory,address,Zone 2,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-012,Store Inventory,status,Active,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-013,ERP,name,Metro Container Logistics,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-013,ERP,email,dispatch@metrolog.com,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-013,ERP,phone,08028005566,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-013,ERP,address,Industrial Zone 2,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-013,ERP,status,Active,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-013,Delivery Partner,name,Metro Container Logistics,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-013,Delivery Partner,email,ops@metrolog.com,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-013,Delivery Partner,phone,08028005566,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-013,Delivery Partner,address,Industrial Zone 2,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-013,Delivery Partner,status,Active,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-013,Store Inventory,name,Metro Container Logistics,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-013,Store Inventory,email,,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-013,Store Inventory,phone,08028005566,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-013,Store Inventory,address,Zone 2,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-013,Store Inventory,status,Active,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-014,ERP,name,Nova Chemical Solutions,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-014,ERP,email,info@novachem.com,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-014,ERP,phone,08028005566,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-014,ERP,address,Industrial Zone 2,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-014,ERP,status,Active,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-014,Delivery Partner,name,Nova Chemical Solutions,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-014,Delivery Partner,email,info@novachem.com,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-014,Delivery Partner,phone,08028005566,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-014,Delivery Partner,address,Industrial Zone 2,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-014,Delivery Partner,status,Active,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-014,Store Inventory,name,Nova Chemical Solutions,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-014,Store Inventory,email,,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-014,Store Inventory,phone,08028005566,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-014,Store Inventory,address,Zone 2,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-014,Store Inventory,status,Active,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-015,ERP,name,Orient Electronic Components,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-015,ERP,email,sales@orientcomp.com,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-015,ERP,phone,08028005566,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-015,ERP,address,Industrial Zone 2,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-015,ERP,status,Active,Verified,2026-08-24 12:00:00
+Supplier,Retail Company,SUP-015,Delivery Partner,name,Orient Electronic Components,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-015,Delivery Partner,email,sales@orientcomp.com,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-015,Delivery Partner,phone,08028005566,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-015,Delivery Partner,address,Industrial Zone 2,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-015,Delivery Partner,status,Active,Verified,2026-08-31 12:00:00
+Supplier,Retail Company,SUP-015,Store Inventory,name,Orient Electronic Components,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-015,Store Inventory,email,,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-015,Store Inventory,phone,08028005566,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-015,Store Inventory,address,Zone 2,Unverified,2026-07-28 12:00:00
+Supplier,Retail Company,SUP-015,Store Inventory,status,Active,Unverified,2026-07-28 12:00:00

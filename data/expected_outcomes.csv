@@ -1,0 +1,51 @@
+entity_type,business_id,field_name,expected_winner,expected_winning_source,expected_status
+Customer,CUST-001,email,new@example.com,E-commerce,RESOLVED
+Customer,CUST-002,email,ananya.old@retail.com,ERP,RESOLVED
+Customer,CUST-003,email,,,MANUAL_REVIEW
+Customer,CUST-004,phone,9822998877,E-commerce,RESOLVED
+Customer,CUST-005,email,amitabh@sen.org,ERP,RESOLVED
+Customer,CUST-006,email,kavita.updated@domain.com,E-commerce,RESOLVED
+Customer,CUST-007,email,vikram.updated@domain.com,E-commerce,RESOLVED
+Customer,CUST-008,email,,,MANUAL_REVIEW
+Customer,CUST-009,email,neha.updated@domain.com,E-commerce,RESOLVED
+Customer,CUST-010,email,rajesh.updated@domain.com,E-commerce,RESOLVED
+Customer,CUST-011,email,sunita.updated@domain.com,E-commerce,RESOLVED
+Customer,CUST-012,email,,,MANUAL_REVIEW
+Customer,CUST-013,email,meera.updated@domain.com,E-commerce,RESOLVED
+Customer,CUST-014,email,arun.updated@domain.com,E-commerce,RESOLVED
+Customer,CUST-015,email,divya.updated@domain.com,E-commerce,RESOLVED
+Customer,CUST-016,email,,,MANUAL_REVIEW
+Customer,CUST-017,email,pooja.updated@domain.com,E-commerce,RESOLVED
+Customer,CUST-018,email,gaurav.updated@domain.com,E-commerce,RESOLVED
+Customer,CUST-019,email,anita.updated@domain.com,E-commerce,RESOLVED
+Customer,CUST-020,email,,,MANUAL_REVIEW
+Product,PROD-001,price,52999.0,E-commerce,RESOLVED
+Product,PROD-002,status,Discontinued,ERP,RESOLVED
+Product,PROD-003,price,13499.0,E-commerce,RESOLVED
+Product,PROD-004,price,950.0,E-commerce,RESOLVED
+Product,PROD-005,price,1299.0,E-commerce,RESOLVED
+Product,PROD-006,price,5999.0,E-commerce,RESOLVED
+Product,PROD-007,price,2299.0,E-commerce,RESOLVED
+Product,PROD-008,price,9499.0,E-commerce,RESOLVED
+Product,PROD-009,price,7499.0,E-commerce,RESOLVED
+Product,PROD-010,price,2799.0,E-commerce,RESOLVED
+Product,PROD-011,price,1799.0,E-commerce,RESOLVED
+Product,PROD-012,price,11499.0,E-commerce,RESOLVED
+Product,PROD-013,price,7999.0,E-commerce,RESOLVED
+Product,PROD-014,price,3299.0,E-commerce,RESOLVED
+Product,PROD-015,price,3799.0,E-commerce,RESOLVED
+Supplier,SUP-001,email,verified@apexlog.com,Delivery Partner,RESOLVED
+Supplier,SUP-002,status,Under Audit,ERP,RESOLVED
+Supplier,SUP-003,email,support@coastalfreight.com,Delivery Partner,RESOLVED
+Supplier,SUP-004,email,orders@deltapack.com,Delivery Partner,RESOLVED
+Supplier,SUP-005,email,billing@easterntex.com,Delivery Partner,RESOLVED
+Supplier,SUP-006,email,info@forwardcargo.net,Delivery Partner,RESOLVED
+Supplier,SUP-007,email,sales@greenleafagro.com,Delivery Partner,RESOLVED
+Supplier,SUP-008,email,info@highlanddairy.in,Delivery Partner,RESOLVED
+Supplier,SUP-009,email,orders@induspoly.com,Delivery Partner,RESOLVED
+Supplier,SUP-010,email,support@jupitertools.com,Delivery Partner,RESOLVED
+Supplier,SUP-011,email,sales@kraftmetals.de,Delivery Partner,RESOLVED
+Supplier,SUP-012,email,supply@lotusorganic.in,Delivery Partner,RESOLVED
+Supplier,SUP-013,email,ops@metrolog.com,Delivery Partner,RESOLVED
+Supplier,SUP-014,email,info@novachem.com,Delivery Partner,RESOLVED
+Supplier,SUP-015,email,sales@orientcomp.com,Delivery Partner,RESOLVED
