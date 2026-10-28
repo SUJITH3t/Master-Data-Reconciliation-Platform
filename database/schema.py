@@ -201,6 +201,35 @@ CREATE TABLE IF NOT EXISTS validation_results (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TABLE IF NOT EXISTS probabilistic_linkage_pairs (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    record_type TEXT NOT NULL,
+    source_a_system TEXT NOT NULL,
+    source_a_id TEXT NOT NULL,
+    source_b_system TEXT NOT NULL,
+    source_b_id TEXT NOT NULL,
+    fellegi_sunter_weight REAL NOT NULL,
+    cosine_similarity REAL NOT NULL,
+    jaro_winkler_similarity REAL NOT NULL,
+    classification TEXT NOT NULL,
+    comparison_details TEXT,
+    reviewed INTEGER DEFAULT 0,
+    resolved_golden_id TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS streaming_cdc_events (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    event_id TEXT UNIQUE NOT NULL,
+    connector TEXT NOT NULL,
+    table_name TEXT NOT NULL,
+    operation TEXT NOT NULL,
+    payload TEXT NOT NULL,
+    lag_ms REAL DEFAULT 0.0,
+    processed_status TEXT DEFAULT 'PROCESSED',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
 -- Indexes for performance and isolation
 CREATE INDEX IF NOT EXISTS idx_customers_org ON customers(organization_id);
 CREATE INDEX IF NOT EXISTS idx_products_org ON products(organization_id);
@@ -209,4 +238,5 @@ CREATE INDEX IF NOT EXISTS idx_source_records_match ON source_records(record_typ
 CREATE INDEX IF NOT EXISTS idx_recon_cases_org ON reconciliation_cases(organization_id, status);
 CREATE INDEX IF NOT EXISTS idx_audit_logs_created ON audit_logs(created_at DESC);
 CREATE INDEX IF NOT EXISTS idx_change_history_record ON change_history(record_type, business_id);
+CREATE INDEX IF NOT EXISTS idx_linkage_class ON probabilistic_linkage_pairs(classification);
 """

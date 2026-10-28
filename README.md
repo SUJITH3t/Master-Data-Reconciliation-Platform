@@ -5,71 +5,93 @@
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.30%2B-FF4B4B.svg)](https://streamlit.io/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.100%2B-009688.svg)](https://fastapi.tiangolo.com/)
-[![Tests](https://img.shields.io/badge/Tests-13%20Passed-brightgreen.svg)]()
+[![Tests](https://img.shields.io/badge/Tests-36%20Passed-brightgreen.svg)]()
+[![Persistence](https://img.shields.io/badge/PostgreSQL-Clustered%20%2B%20PgBouncer-336791.svg)](https://www.postgresql.org/)
+[![Security](https://img.shields.io/badge/Security-JWT%20Bearer%20Auth-red.svg)]()
+[![Streaming](https://img.shields.io/badge/Streaming-Kafka%20%2B%20Debezium%20CDC-black.svg)]()
+[![Linkage](https://img.shields.io/badge/Entity%20Linkage-Fellegi--Sunter-orange.svg)]()
 [![Precision](https://img.shields.io/badge/Reconciliation%20Precision-100%25-success.svg)]()
 
 ---
 
 ## 1. Project Overview
 
-**Master Data Hub** is a full-stack, enterprise-grade Master Data Reconciliation Platform designed for retail organizations. It ingests master records (Customers, Products, Suppliers) across disparate operational systems (ERP, E-commerce, Store Inventory, Delivery Partner), automatically identifies discrepancies, missing attributes, stale records, and verification mismatches, and applies deterministic survivorship rules to recommend the single golden master value.
+**Master Data Hub** is a full-stack, enterprise-grade Master Data Reconciliation Platform designed for multi-channel retail organizations. It ingests master records (Customers, Products, Suppliers) across disparate operational systems (ERP, E-commerce, Store POS Network, Delivery Partner), automatically identifies discrepancies, missing attributes, stale records, and verification mismatches, and applies deterministic survivorship rules augmented with probabilistic entity linkage to recommend single golden master values.
 
 ### Key Capabilities:
-- **Deterministic Reconciliation Pipeline:** Normalization, deterministic matching, freshness calculation, verification evaluation, and dynamic survivorship rules.
-- **Ambiguity Safety Catch:** Never guesses or selects randomly when rules produce a tie; automatically escalates to Human Review (`MANUAL_REVIEW`).
+- **Probabilistic Entity Linkage (Fellegi-Sunter):** Typo-tolerant matching using the classic Fellegi-Sunter (1969) model, Jaro-Winkler distance, Character 3-gram Cosine similarity, and Soundex phonetic blocking to reconcile phonetic spelling variations (e.g., "Jonathon Smith" vs "Johnathan Smyth") and address abbreviations.
+- **Asynchronous Streaming Ingestion:** High-throughput event consumption supporting Apache Kafka and Debezium Change Data Capture (CDC) JSON envelopes (`op: c, u, d, r`), background daemon worker pools, sub-2ms enqueue latency, and streaming telemetry.
+- **Production Clustered Persistence & Pooling:** Multi-backend abstraction supporting PostgreSQL 15 (Amazon RDS / Aurora) with `psycopg2.pool.ThreadedConnectionPool`, `SQLAlchemy` `QueuePool`, PgBouncer configuration, and automated SQLite migration with zero-config local fallback.
+- **Hardened JWT Bearer Authentication:** RFC 7519 compliant JSON Web Token authentication using HMAC-SHA256 signatures, expiration rotation, and granular FastAPI role dependencies (`require_admin`, `require_specialist`).
+- **W3C PROV-O Data Lineage & Provenance:** Full ontological DAG tracking (`prov:Entity`, `prov:Activity`, `prov:Agent`) establishing exact auditability for every golden master attribute.
+- **Reviewer-Capacity Queuing Analysis:** Mathematical Erlang-C ($M/M/c$) queuing model determining required specialist FTE headcount, server utilization ($\rho$), queue wait times, and SLA compliance curves with cognitive fatigue bounds.
+- **Deterministic Reconciliation Pipeline & Ambiguity Catch:** Dynamic YAML rules engine with a fail-safe ambiguity catch routing unresolvable ties to Human Review (`MANUAL_REVIEW`).
 - **Mathematical Confidence Scoring:** 0–100% confidence calculated from verification status (+35%), timestamp freshness (+25%), source authority (+18%), multi-source agreement (+12%), and completeness (+10%).
-- **Explainable Plain-English Rationale:** Automatically details why a winning value was chosen, which systems lost, and which systems had missing data (with optional Groq LLM narrative polishing).
-- **Role-Based Access Control (RBAC) & Organization Isolation:** Strict partition between Enterprise HQ, Store Network, and External Delivery Partner.
-- **Full Governance Lifecycle:** `PENDING` &rarr; `IN_REVIEW` &rarr; `APPROVED` &rarr; `PUBLISHED` (with mandatory rejection reasons, manual review escalations, and immutable audit logs).
-- **Empirical Validation Benchmark:** 50+ real master entities tested against a naive baseline, measuring true Precision, False Positive Rate, Success Rate, and execution latency.
-- **Headless REST API:** Fully integrated FastAPI endpoints for programmatic ingestion, approval, and audit retrieval.
 
 ---
 
-## 2. Architecture Diagram
+## 2. Architecture Diagram (70% Milestone State)
 
 ```mermaid
 graph TD
-    subgraph Operational Source Systems
+    subgraph Operational Feeds & Streaming
         S1[ERP SAP/Oracle]
         S2[E-commerce Shopify]
-        S3[Store Inventory POS]
+        S3[Store POS Network]
         S4[Delivery Partner Logistics]
+        KAFKA[Kafka / Debezium CDC Broker]
+        S1 & S2 & S3 & S4 --> KAFKA
     end
 
-    subgraph Data Ingestion & Normalization Layer
-        ING[Ingestion Service & Normalizer]
-        S1 --> ING
-        S2 --> ING
-        S3 --> ING
-        S4 --> ING
+    subgraph Data Ingestion & Streaming Buffer Layer
+        STREAM[Asynchronous Streaming Engine]
+        QUEUE[Thread-Safe In-Memory Queue]
+        WORKERS[Worker Pool Daemon Threads]
+        KAFKA --> STREAM --> QUEUE --> WORKERS
+    end
+
+    subgraph Normalization & Probabilistic Linkage Core
+        NORM[Normalization & Cleansing]
+        SOUNDEX[Phonetic Soundex Blocking]
+        FS_MODEL[Fellegi-Sunter Matcher]
+        JW[Jaro-Winkler Typo Metric]
+        COS[N-Gram Cosine Metric]
+        
+        WORKERS --> NORM --> SOUNDEX --> FS_MODEL
+        FS_MODEL --- JW
+        FS_MODEL --- COS
     end
 
     subgraph Reconciliation & Survivorship Engine
-        R_MATCH[Deterministic Matching]
-        R_FRESH[Freshness Evaluator <=30d Fresh, >30d Stale]
         R_RULES[Dynamic YAML Survivorship Rules]
         R_CONF[Confidence Scorer 0-100%]
         R_EXPL[Plain-English Explainer]
         R_SAFE{Ambiguous Tie?}
         
-        ING --> R_MATCH --> R_FRESH --> R_RULES
-        R_RULES --> R_SAFE
-        R_SAFE -- "Yes (Tie)" --> MR[Human Review Queue]
+        FS_MODEL --> R_RULES --> R_SAFE
+        R_SAFE -- "Yes (Tie / Borderline)" --> MR[Human Review Queue]
         R_SAFE -- "No (Clear Winner)" --> R_CONF --> R_EXPL --> REC[Reconciliation Recommendation]
     end
 
-    subgraph Persistence Layer SQLite
-        DB[(master_data.db)]
-        REC --> DB
-        MR --> DB
+    subgraph Production Clustered Persistence Layer
+        PGBOUNCER[PgBouncer Pooler]
+        PG_DB[(PostgreSQL 15 / RDS)]
+        SQLITE_DB[(SQLite WAL Fallback)]
+        REC --> PGBOUNCER --> PG_DB
+        MR --> PGBOUNCER --> PG_DB
+        PG_DB -.-> SQLITE_DB
     end
 
-    subgraph User Interfaces & APIs
-        UI[Streamlit Business UI]
-        API[FastAPI REST Endpoints]
-        DB <--> UI
-        DB <--> API
+    subgraph Governance, Lineage & Secure Delivery
+        PROV[W3C PROV-O Lineage DAG Engine]
+        CAPACITY[Erlang-C Queuing Simulator]
+        API[FastAPI with JWT Bearer Auth]
+        UI[Streamlit Enterprise Workspace]
+        
+        PG_DB <--> PROV
+        MR <--> CAPACITY
+        PG_DB <--> API
+        PG_DB <--> UI
     end
 ```
 
@@ -77,14 +99,17 @@ graph TD
 
 ## 3. Technology Stack
 
-- **Core Application & Logic:** Python 3.10+, Pandas, Pydantic
-- **Frontend / UI:** Streamlit (Custom Enterprise CSS, Glassmorphism, Status Badges)
+- **Core Application & Logic:** Python 3.10+, Pandas, Pydantic, Scikit-learn, SciPy
+- **Probabilistic Entity Linkage:** Fellegi-Sunter (1969), Jaro-Winkler, N-gram Cosine, Soundex
+- **Streaming Ingestion:** Debezium CDC JSON parser, asynchronous queue buffer, worker pools
+- **API Security:** PyJWT (RFC 7519 HMAC-SHA256), OAuth2 Password Bearer
+- **Production Persistence:** PostgreSQL 15, PgBouncer, `psycopg2` ThreadedConnectionPool, `SQLAlchemy` QueuePool
+- **Queuing & Capacity:** Erlang-C ($M/M/c$) Multiserver Mathematical Model
+- **Lineage Standard:** W3C PROV-O (Provenance Ontology)
+- **Frontend / UI:** Streamlit (Custom Enterprise CSS, Glassmorphism Badges)
 - **Visualizations:** Plotly Express & Plotly Graph Objects
 - **Rule Configuration:** PyYAML (`config/survivorship_rules.yaml`)
-- **Persistence:** SQLite3 (WAL mode, Foreign Keys enabled)
-- **API Stubs:** FastAPI, Uvicorn
-- **Optional Narrative AI:** Groq SDK (`llama-3.3-70b-versatile`)
-- **Automated Testing:** Pytest
+- **Automated Testing:** Pytest (36/36 Passing Tests)
 
 ---
 
@@ -94,12 +119,12 @@ The platform includes pre-seeded demonstration accounts covering all RBAC person
 
 | Role | Email | Password | Organization | Scope & Permissions |
 | :--- | :--- | :--- | :--- | :--- |
-| **Admin** | `admin@retail.demo` | `Admin123!` | Retail Company (HQ) | Full global governance, rule editor, all organizations, audit viewer |
-| **Reconciliation Specialist** | `specialist@retail.demo` | `Spec123!` | Retail Company (HQ) | Review evidence, approve, reject, escalate manual reviews, view change history |
+| **Admin** | `admin@retail.demo` | `Admin123!` | Retail Company (HQ) | Full global governance, rule editor, pool monitor, all orgs, audit viewer |
+| **Reconciliation Specialist** | `specialist@retail.demo` | `Spec123!` | Retail Company (HQ) | Review evidence, approve, reject, escalate manual reviews, capacity simulator |
 | **Store Manager** | `manager@retail.demo` | `Store123!` | Store Network | Isolated to store records; approve store conflicts; no admin access |
 | **External Partner** | `partner@delivery.demo` | `Partner123!` | Delivery Partner | Strictly isolated to Delivery Partner records; read-only inspection |
 
-*Quick 1-Click login buttons are also available on the sign-in screen.*
+*Quick 1-Click login buttons are available on the sign-in screen.*
 
 ---
 
@@ -108,7 +133,7 @@ The platform includes pre-seeded demonstration accounts covering all RBAC person
 ### Step 1: Clone Repository & Create Virtual Environment
 ```bash
 git clone <repository_url>
-cd master_data_reconciliation
+cd Master-Data-Reconciliation-Platform
 
 python3 -m venv venv
 source venv/bin/activate       # On Windows: venv\Scripts\activate
@@ -116,58 +141,73 @@ pip install -r requirements.txt
 ```
 
 ### Step 2: Environment Configuration (Optional)
-Copy `.env.example` to `.env`:
 ```bash
 cp .env.example .env
 ```
-*(The application runs 100% offline without Groq. To enable optional Groq explanation polishing, set `GROQ_API_KEY=your_key` in `.env`)*.
+*(Runs 100% offline out-of-the-box. To connect to PostgreSQL or Kafka, set `DATABASE_URL` and `KAFKA_BOOTSTRAP_SERVERS` in `.env` or use Docker Compose).*
 
-### Step 3: Run the Streamlit Application
+### Step 3: Run with Docker Compose (PostgreSQL + PgBouncer + Kafka + App)
+```bash
+docker-compose up -d
+```
+
+### Step 4: Run Locally with Streamlit
 ```bash
 streamlit run app.py
 ```
-*The SQLite database (`master_data.db`) initializes and seeds automatically on first launch!*
 
 ---
 
-## 6. Running Headless API Stubs
+## 6. Running Headless API with JWT Bearer Authentication
 
-To launch the FastAPI REST integration endpoints:
+To launch the FastAPI REST service:
 ```bash
 uvicorn api.routes:app --host 0.0.0.0 --port 8000 --reload
 ```
 Interactive Swagger documentation is available at `http://localhost:8000/docs`.
 
 ### Available API Endpoints:
-- `POST /api/records/ingest`: Ingest raw source system records.
-- `GET /api/reconciliation/pending`: Retrieve pending reconciliation cases.
-- `GET /api/reconciliation/{record_id}`: Inspect reconciliation details and source evidence.
-- `POST /api/reconciliation/{case_id}/approve`: Approve recommendation.
-- `POST /api/reconciliation/{case_id}/reject`: Reject recommendation (requires reason).
-- `POST /api/reconciliation/batch`: Trigger batch reconciliation across active records.
-- `GET /api/audit/{record_id}`: Retrieve audit history for a master record.
+- `POST /api/auth/token`: OAuth2 password bearer token endpoint for Swagger UI login.
+- `POST /api/auth/login`: JSON login endpoint returning signed JWT access token.
+- `GET /api/auth/me`: Authenticated user profile and RBAC permissions.
+- `POST /api/linkage/compare`: Fellegi-Sunter typo-tolerant pairwise record comparison.
+- `GET /api/linkage/benchmark`: 4-case probabilistic accuracy benchmark.
+- `POST /api/stream/debezium/cdc`: Ingest Debezium CDC payload with sub-2ms response.
+- `POST /api/stream/simulate`: Trigger simulated real-time POS & Shopify CDC stream.
+- `GET /api/stream/status`: Stream queue depth, ingestion lag, and throughput metrics.
+- `GET /api/database/status`: PostgreSQL cluster readiness and connection pool metrics.
+- `POST /api/records/ingest`: Ingest raw source system records (JWT secured).
+- `GET /api/reconciliation/pending`: Retrieve pending reconciliation cases (JWT secured).
+- `POST /api/reconciliation/{case_id}/approve`: Approve recommendation (Specialist/Admin).
+- `POST /api/reconciliation/{case_id}/reject`: Reject recommendation (Specialist/Admin).
+- `GET /api/audit/{record_id}`: Retrieve audit history for a master record (JWT secured).
 
 ---
 
-## 7. Running the Automated Test Suite
+## 7. Running the Automated Test Suite (36/36 Passing)
 
-To run all unit, edge-case, RBAC, and validation tests:
+To run all unit, security, linkage, streaming, edge-case, and validation tests:
 ```bash
 pytest -v
 ```
 
-### Test Suite Summary (13/13 Passing):
-1. `tests/test_reconciliation.py`: Critical email conflict resolution and unanimous agreement.
-2. `tests/test_rules.py`: YAML loading, ERP product status priority, and supplier verification precedence.
-3. `tests/test_permissions.py`: RBAC matrix, organization isolation, unauthorized action blocks, and approval persistence.
-4. `tests/test_edge_cases.py`: Ambiguous verified email tie (safe `MANUAL_REVIEW`), stale vs missing preservation, and edge demonstrators.
-5. `tests/test_validation.py`: Execution of 50-entity comparative benchmark.
+### Test Suite Structure (36 Tests):
+1. `tests/test_jwt_security.py` (6 tests): Token creation, cryptographic signature checks, expiration rejection, `/api/auth/login`, and RBAC enforcement.
+2. `tests/test_probabilistic_linkage.py` (7 tests): Soundex blocking, Jaro-Winkler, N-gram Cosine, Fellegi-Sunter weights, and 100% benchmark.
+3. `tests/test_streaming_ingestion.py` (3 tests): Debezium CDC parser (`c`, `u`), streaming queue enqueue, and worker telemetry.
+4. `tests/test_postgres_persistence.py` (4 tests): PersistenceManager pool initialization, diagnostics, table discovery, and pooled queries.
+5. `tests/test_lineage_and_capacity.py` (3 tests): W3C PROV-O DAG generation, Erlang-C stability, and capacity matrix.
+6. `tests/test_reconciliation.py` (2 tests): Critical email conflict resolution and unanimous agreement.
+7. `tests/test_rules.py` (3 tests): YAML configuration, ERP status priority, and supplier verification precedence.
+8. `tests/test_permissions.py` (4 tests): Multi-tenant RBAC matrix, organization isolation, and approval persistence.
+9. `tests/test_edge_cases.py` (3 tests): Ambiguous verified tie, stale vs missing preservation, and edge demonstrators.
+10. `tests/test_validation.py` (1 test): 50-entity comparative validation benchmark.
 
 ---
 
 ## 8. Empirical Validation Methodology
 
-The platform includes a real validation dataset of 50 master entities (20 Customers, 15 Products, 15 Suppliers) with 690 contributing source system records in `data/validation_dataset.csv`, with expected ground truth in `data/expected_outcomes.csv`.
+The platform includes a real validation dataset of 50 master entities (20 Customers, 15 Products, 15 Suppliers) with 690 contributing source records in `data/validation_dataset.csv`.
 
 ### Benchmark Results:
 | Metric | Baseline (Fixed Priority) | Proposed Dynamic Engine | Target | Result |
@@ -180,30 +220,8 @@ The platform includes a real validation dataset of 50 master entities (20 Custom
 
 ---
 
-## 9. Evaluator End-to-End Walkthrough Guide
-
-To evaluate the complete master data governance lifecycle:
-1. **Sign In:** Click **"Sign In as Admin"** or **"Reconciliation Specialist"**.
-2. **Dashboard:** Observe the live KPI cards and data health distribution (Fresh, Stale, Missing, Conflicts).
-3. **Reconciliation:**
-   - Open **Reconciliation Workspace**.
-   - Select case **`CUST-001` (email)**.
-   - Inspect side-by-side comparison: ERP (`old@example.com`, 10 days ago), E-commerce (`new@example.com`, 2 days ago), and Store Inventory (`[Missing]`).
-   - Notice the high confidence recommendation (`new@example.com`) and plain-English explanation.
-   - Click **"Approve"**.
-   - Click **"Publish"** to update the golden master record.
-4. **Lineage & Audit:**
-   - Open **History** to view the newly published email change timeline.
-   - Open **Audit Log** to verify the immutable audit entry.
-5. **Validation:**
-   - Open **Validation** and click **"Run Validation Benchmark"**.
-   - Review the Baseline vs. Proposed metric comparisons and inspect the 3 interactive Edge Case tests.
-6. **Organization Isolation:**
-   - Sign Out and sign in as **"External Partner"**.
-   - Notice that internal Retail Company records are completely hidden, and approval buttons are disabled.
-
----
-
-## 10. Documentation Links
-- Detailed Business & Functional Requirements: [`reports/requirements.md`](reports/requirements.md)
-- Prototype Limitations & Production Architecture: [`reports/limitations.md`](reports/limitations.md)
+## 9. Comprehensive Documentation & Reports
+- **70% Milestone Comprehensive Project Evaluation Report:** [`reports/project_evaluation_report_70_percent.md`](reports/project_evaluation_report_70_percent.md)
+- **Formal Data Lineage & Reviewer-Capacity Analysis:** [`reports/lineage_and_capacity_analysis.md`](reports/lineage_and_capacity_analysis.md)
+- **Prototype Limitations & Production Architecture:** [`reports/limitations.md`](reports/limitations.md)
+- **Detailed Business & Functional Requirements:** [`reports/requirements.md`](reports/requirements.md)

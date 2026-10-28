@@ -19,6 +19,8 @@ from ui.validation import render_validation_page
 from ui.history import render_history_page
 from ui.audit import render_audit_page
 from ui.admin import render_admin_page
+from ui.linkage import render_linkage_page
+from ui.capacity import render_capacity_page
 
 # Page Configuration
 st.set_page_config(
@@ -83,6 +85,8 @@ def main():
             ("🏠 Dashboard", "Dashboard"),
             ("🔍 Reconciliation", "Reconciliation"),
             ("✅ Approval Queue", "Approval Queue"),
+            ("🧬 Linkage & Streaming", "Linkage & Streaming"),
+            ("🕸️ Lineage & Capacity", "Lineage & Capacity"),
             ("📋 Records", "Records"),
             ("📊 Validation", "Validation"),
             ("🕒 History", "History"),
@@ -114,6 +118,10 @@ def main():
             render_reconciliation_page(user)
         elif page_name == "Approval Queue":
             render_approvals_page(user)
+        elif page_name == "Linkage & Streaming":
+            render_linkage_page(user)
+        elif page_name == "Lineage & Capacity":
+            render_capacity_page(user)
         elif page_name == "Records":
             render_records_page(user)
         elif page_name == "Validation":

@@ -1,0 +1,112 @@
+version: '3.8'
+
+services:
+  # 1. Primary PostgreSQL 15 Clustered Database
+  postgres:
+    image: postgres:15-alpine
+    container_name: master_data_postgres
+    restart: always
+    environment:
+      POSTGRES_DB: master_data_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres_secure_password
+      PGDATA: /var/lib/postgresql/data/pgdata
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./database/postgres_schema.sql:/docker-entrypoint-initdb.d/init_schema.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d master_data_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # 2. PgBouncer Connection Pooler (Production RDS Simulation)
+  pgbouncer:
+    image: edoburu/pgbouncer:latest
+    container_name: master_data_pgbouncer
+    restart: always
+    environment:
+      DB_USER: postgres
+      DB_PASSWORD: postgres_secure_password
+      DB_HOST: postgres
+      DB_NAME: master_data_db
+      POOL_MODE: transaction
+      MAX_CLIENT_CONN: 500
+      DEFAULT_POOL_SIZE: 25
+      MIN_POOL_SIZE: 5
+      RESERVE_POOL_SIZE: 5
+      SERVER_IDLE_TIMEOUT: 600
+    ports:
+      - "6432:5432"
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  # 3. Apache Kafka Broker for Real-time Streaming Feeds
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.4.0
+    container_name: master_data_zookeeper
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    ports:
+      - "2181:2181"
+
+  kafka:
+    image: confluentinc/cp-kafka:7.4.0
+    container_name: master_data_kafka
+    depends_on:
+      - zookeeper
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:29092,PLAINTEXT_HOST://localhost:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+
+  # 4. Redis Cache / Task Queue
+  redis:
+    image: redis:7-alpine
+    container_name: master_data_redis
+    ports:
+      - "6379:6379"
+
+  # 5. Master Data Hub Streamlit UI
+  web_ui:
+    build: .
+    container_name: master_data_ui
+    command: streamlit run app.py --server.port=8501 --server.address=0.0.0.0
+    ports:
+      - "8501:8501"
+    environment:
+      DATABASE_URL: postgresql://postgres:postgres_secure_password@pgbouncer:5432/master_data_db
+      KAFKA_BOOTSTRAP_SERVERS: kafka:29092
+      JWT_SECRET_KEY: enterprise_master_data_jwt_secret_key_prod_2026
+    depends_on:
+      pgbouncer:
+        condition: service_started
+      kafka:
+        condition: service_started
+
+  # 6. Headless FastAPI Service
+  api_service:
+    build: .
+    container_name: master_data_api
+    command: uvicorn api.routes:app --host 0.0.0.0 --port 8000
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgresql://postgres:postgres_secure_password@pgbouncer:5432/master_data_db
+      KAFKA_BOOTSTRAP_SERVERS: kafka:29092
+      JWT_SECRET_KEY: enterprise_master_data_jwt_secret_key_prod_2026
+    depends_on:
+      pgbouncer:
+        condition: service_started
+
+volumes:
+  pgdata:
