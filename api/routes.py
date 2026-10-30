@@ -13,6 +13,8 @@ from pydantic import BaseModel, Field
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
+from contextlib import asynccontextmanager
+
 from database.database import init_db, execute_query
 from services.auth_service import AuthService, PERMISSIONS
 from services.approval_service import ApprovalService
@@ -23,20 +25,23 @@ from services.streaming_ingestion import streaming_engine, DebeziumCDCParser
 from engine.probabilistic_linkage import FellegiSunterModel, ProbabilisticLinkageEngine
 from database.migration import check_database_readiness
 
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    """Ensure database schema is initialized on startup."""
+    init_db()
+    yield
+
+
 app = FastAPI(
     title="Master Data Hub REST API",
     description="Enterprise Headless Master Data Reconciliation, JWT Auth, Streaming Ingestion & Probabilistic Linkage API",
-    version="2.0.0"
+    version="2.0.0",
+    lifespan=lifespan
 )
 
 # OAuth2 Password Bearer scheme for Swagger UI & OpenAPI spec
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/auth/token", auto_error=False)
-
-
-@app.on_event("startup")
-def startup_event():
-    """Ensure database schema is initialized on startup."""
-    init_db()
 
 
 # =====================================================================
@@ -107,8 +112,8 @@ def require_admin(user: Dict[str, Any] = Depends(get_current_user)) -> Dict[str,
 # =====================================================================
 
 class LoginRequest(BaseModel):
-    email: str = Field(..., example="admin@retail.demo")
-    password: str = Field(..., example="Admin123!")
+    email: str = Field(..., json_schema_extra={"example": "admin@retail.demo"})
+    password: str = Field(..., json_schema_extra={"example": "Admin123!"})
 
 
 class TokenResponse(BaseModel):
